@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lumière Skin Clinic — Expert dermatology, advanced skincare treatments, and ethical beauty. Book your consultation today." />
-  <meta name="keywords" content="skincare clinic, dermatology, facial treatment, acne treatment, anti-aging, skin consultation" />
+  <meta name="theme-color" content="#FAF7F2" />
+
+  <meta name="description"
+    content="Lumière Skin Clinic — Bengaluru's premier ethical dermatology & advanced skincare clinic in Indiranagar. Book your expert consultation today." />
+  <meta name="keywords"
+    content="skincare clinic bangalore, dermatologist in indiranagar, acne treatment bengaluru, pigmentation tan removal, anti-aging facial india, best skin clinic bangalore" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Lumière Skin Clinic" />
-  <meta property="og:description" content="Advanced skincare rooted in science and ethics. Discover radiant skin." />
+  <meta property="og:title" content="Lumière Skin Clinic — Premium Skincare Indiranagar, Bengaluru" />
+  <meta property="og:description"
+    content="Advanced, ethical skincare customized for Indian skin types. Led by board-certified MD dermatologists in Bengaluru." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200" />
-  <title>Lumière Skin Clinic — Ethical & Advanced Skincare</title>
+  <title>Lumière Skin Clinic — Premium Dermatology & Skincare, Bengaluru</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Homemade+Apple&display=swap"
+    rel="stylesheet" />
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --cream: #FAF7F2;
@@ -35,12 +53,15 @@
       --font-display: 'Cormorant Garamond', serif;
       --font-body: 'DM Sans', sans-serif;
       --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      --shadow-sm: 0 2px 12px rgba(42,42,40,0.06);
-      --shadow-md: 0 8px 32px rgba(42,42,40,0.1);
-      --shadow-lg: 0 20px 60px rgba(42,42,40,0.14);
+      --shadow-sm: 0 2px 12px rgba(42, 42, 40, 0.06);
+      --shadow-md: 0 8px 32px rgba(42, 42, 40, 0.1);
+      --shadow-lg: 0 20px 60px rgba(42, 42, 40, 0.14);
     }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
     body {
       font-family: var(--font-body);
@@ -50,716 +71,2006 @@
       overflow-x: hidden;
     }
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+    /* Defensive image constraints */
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      backface-visibility: hidden;
+    }
+
+    .service-card img,
+    .about-img-main img,
+    .about-img-accent img,
+    .team-img img,
+    .hero-img-wrap img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1001;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
 
     /* ========== SCROLL ANIMATIONS ========== */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal-left.visible { opacity: 1; transform: none; }
-    .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal-right.visible { opacity: 1; transform: none; }
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     /* ========== NAVBAR ========== */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
       padding: 0 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
       transition: background var(--transition), box-shadow var(--transition);
     }
+
     nav.scrolled {
-      background: rgba(255,252,248,0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-sm);
+      background: var(--warm-white);
+      box-shadow: var(--shadow-md);
     }
 
     .nav-logo {
-      display: flex; flex-direction: column; line-height: 1;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
       font-family: var(--font-display);
     }
-    .nav-logo span:first-child { font-size: 1.45rem; font-weight: 600; color: var(--charcoal); letter-spacing: 0.02em; }
-    .nav-logo span:last-child { font-size: 0.62rem; font-weight: 300; color: var(--gold); letter-spacing: 0.22em; text-transform: uppercase; }
+
+    .nav-logo span:first-child {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: var(--charcoal);
+      letter-spacing: normal;
+    }
+
+    .nav-logo span:last-child {
+      font-size: 0.52rem;
+      font-weight: normal;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
     .nav-links {
-      display: flex; align-items: center; gap: 2.2rem;
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
     }
+
     .nav-links a {
-      font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--mid);
-      position: relative; padding-bottom: 3px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      position: relative;
+      padding-bottom: 3px;
       transition: color var(--transition);
     }
+
     .nav-links a::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 1px; background: var(--sage-dark);
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--sage-dark);
       transition: width var(--transition);
     }
-    .nav-links a:hover { color: var(--charcoal); }
-    .nav-links a:hover::after { width: 100%; }
+
+    .nav-links a:hover {
+      color: var(--charcoal);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     .nav-cta {
-      background: var(--charcoal); color: var(--cream) !important;
-      padding: 9px 22px !important; border-radius: 2px;
-      font-size: 0.78rem !important; letter-spacing: 0.1em !important;
+      background: var(--charcoal);
+      color: var(--cream) !important;
+      padding: 9px 22px !important;
+      border-radius: 2px;
+      font-size: 0.78rem !important;
+      letter-spacing: 0.1em !important;
       transition: background var(--transition), transform 0.2s !important;
     }
-    .nav-cta::after { display: none !important; }
-    .nav-cta:hover { background: var(--sage-dark) !important; transform: translateY(-1px); }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--sage-dark) !important;
+      transform: translateY(-1px);
+    }
 
     /* Hamburger */
     .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; padding: 8px; background: none; border: none;
-      width: 40px; height: 40px; justify-content: center; align-items: center;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
     }
+
     .hamburger span {
-      display: block; width: 24px; height: 1.5px;
+      display: block;
+      width: 24px;
+      height: 1.5px;
       background: var(--charcoal);
       transition: transform 0.4s ease, opacity 0.3s ease, width 0.3s ease;
       transform-origin: center;
     }
-    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
 
     .mobile-menu {
-      display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
-      background: var(--warm-white); z-index: 999;
-      flex-direction: column; align-items: center; justify-content: center;
-      gap: 2rem; opacity: 0; pointer-events: none;
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--warm-white);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
       transition: opacity 0.4s ease;
     }
-    .mobile-menu.open { opacity: 1; pointer-events: all; }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
     .mobile-menu a {
-      font-family: var(--font-display); font-size: 2rem; font-weight: 300;
-      color: var(--charcoal); letter-spacing: 0.05em;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      letter-spacing: 0.05em;
       transition: color var(--transition);
     }
-    .mobile-menu a:hover { color: var(--sage-dark); }
+
+    .mobile-menu a:hover {
+      color: var(--sage-dark);
+    }
+
     .mobile-menu .mob-cta {
-      font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
-      background: var(--charcoal); color: var(--cream);
-      padding: 14px 36px; letter-spacing: 0.12em; text-transform: uppercase;
-      border-radius: 2px; margin-top: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 14px 36px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      margin-top: 1rem;
     }
 
     /* ========== HERO ========== */
     #hero {
-      min-height: 100vh; position: relative; overflow: hidden;
-      display: flex; align-items: center;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
       background: var(--cream);
     }
 
     .hero-bg {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background: linear-gradient(135deg, #FAF7F2 0%, #F0EAE0 40%, #E8DDD1 100%);
     }
 
     /* Animated floating orbs */
     .orb {
-      position: absolute; border-radius: 50%;
-      pointer-events: none; will-change: transform;
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      will-change: transform;
     }
+
     .orb-1 {
-      width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(143,169,138,0.18) 0%, transparent 70%);
-      top: -100px; right: -80px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(143, 169, 138, 0.18) 0%, transparent 70%);
+      top: -100px;
+      right: -80px;
       animation: floatOrb1 14s ease-in-out infinite;
     }
+
     .orb-2 {
-      width: 380px; height: 380px;
-      background: radial-gradient(circle, rgba(232,197,176,0.25) 0%, transparent 70%);
-      bottom: 60px; left: -60px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(232, 197, 176, 0.25) 0%, transparent 70%);
+      bottom: 60px;
+      left: -60px;
       animation: floatOrb2 18s ease-in-out infinite;
     }
+
     .orb-3 {
-      width: 240px; height: 240px;
-      background: radial-gradient(circle, rgba(184,150,90,0.12) 0%, transparent 70%);
-      top: 40%; left: 40%;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(184, 150, 90, 0.12) 0%, transparent 70%);
+      top: 40%;
+      left: 40%;
       animation: floatOrb3 22s ease-in-out infinite;
     }
 
     @keyframes floatOrb1 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(-30px, 30px) scale(1.05); }
-      66% { transform: translate(20px, -20px) scale(0.97); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(-30px, 30px) scale(1.05);
+      }
+
+      66% {
+        transform: translate(20px, -20px) scale(0.97);
+      }
     }
+
     @keyframes floatOrb2 {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(40px, -30px) scale(1.08); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(40px, -30px) scale(1.08);
+      }
     }
+
     @keyframes floatOrb3 {
-      0%, 100% { transform: translate(0, 0); }
-      25% { transform: translate(-20px, 20px); }
-      75% { transform: translate(20px, -10px); }
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(-20px, 20px);
+      }
+
+      75% {
+        transform: translate(20px, -10px);
+      }
     }
 
     /* Particle dots */
-    .particles { position: absolute; inset: 0; pointer-events: none; }
+    .particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
     .particle {
-      position: absolute; width: 3px; height: 3px; border-radius: 50%;
-      background: var(--sage); opacity: 0;
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--sage);
+      opacity: 0;
       animation: particleFade 6s ease-in-out infinite;
     }
 
     @keyframes particleFade {
-      0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
-      50% { opacity: 0.4; transform: translateY(-20px) scale(1); }
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: translateY(-20px) scale(1);
+      }
     }
 
     .hero-content {
-      position: relative; z-index: 2;
-      padding: 0 5%; width: 100%; max-width: 1280px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+      position: relative;
+      z-index: 2;
+      padding: 0 5%;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
     }
 
-    .hero-text { padding-top: 72px; }
+    .hero-text {
+      padding-top: 60px;
+    }
 
     .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(143,169,138,0.15); border: 1px solid rgba(143,169,138,0.3);
-      padding: 6px 14px; border-radius: 100px; margin-bottom: 1.5rem;
-      opacity: 0; animation: fadeInUp 0.8s ease 0.3s forwards;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(143, 169, 138, 0.15);
+      border: 1px solid rgba(143, 169, 138, 0.3);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease 0.3s forwards;
     }
+
     .hero-badge .dot {
-      width: 6px; height: 6px; border-radius: 50%; background: var(--sage-dark);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage-dark);
       animation: pulse 2s ease infinite;
     }
+
     @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.5); opacity: 0.6; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+      }
     }
-    .hero-badge span { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-dark); font-weight: 500; }
+
+    .hero-badge span {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      font-weight: 500;
+    }
 
     .hero-h1 {
-      font-family: var(--font-display); font-size: clamp(3rem, 5.5vw, 5.2rem);
-      font-weight: 300; line-height: 1.08; color: var(--charcoal);
-      letter-spacing: -0.01em; margin-bottom: 1.5rem;
-      opacity: 0; animation: fadeInUp 0.9s ease 0.5s forwards;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5.5vw, 5.2rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--charcoal);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.9s ease 0.5s forwards;
     }
-    .hero-h1 em { font-style: italic; color: var(--sage-dark); }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--sage-dark);
+    }
+
     .hero-h1 .line-accent {
-      display: block; position: relative;
+      display: block;
+      position: relative;
     }
+
     .hero-h1 .underline-anim {
-      position: relative; display: inline-block;
+      position: relative;
+      display: inline-block;
     }
+
     .hero-h1 .underline-anim::after {
       content: '';
-      position: absolute; bottom: -2px; left: 0; right: 0; height: 2px;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
       background: linear-gradient(90deg, var(--blush-deep), var(--gold));
-      transform: scaleX(0); transform-origin: left;
+      transform: scaleX(0);
+      transform-origin: left;
       animation: lineGrow 1s ease 1.4s forwards;
     }
-    @keyframes lineGrow { to { transform: scaleX(1); } }
+
+    @keyframes lineGrow {
+      to {
+        transform: scaleX(1);
+      }
+    }
 
     .hero-desc {
-      font-size: 1rem; color: var(--mid); line-height: 1.75;
-      max-width: 440px; margin-bottom: 2.5rem;
+      font-size: 1rem;
+      color: var(--mid);
+      line-height: 1.75;
+      max-width: 440px;
+      margin-bottom: 2.5rem;
       font-weight: 300;
-      opacity: 0; animation: fadeInUp 0.9s ease 0.7s forwards;
+      opacity: 0;
+      animation: fadeInUp 0.9s ease 0.7s forwards;
     }
 
     .hero-actions {
-      display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
-      opacity: 0; animation: fadeInUp 0.9s ease 0.9s forwards;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeInUp 0.9s ease 0.9s forwards;
     }
 
     .btn-primary {
-      background: var(--charcoal); color: var(--cream);
-      padding: 14px 32px; border-radius: 2px;
-      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 14px 32px;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       border: 2px solid var(--charcoal);
       transition: background var(--transition), color var(--transition), transform 0.2s;
-      cursor: pointer; display: inline-block;
+      cursor: pointer;
+      display: inline-block;
     }
-    .btn-primary:hover { background: var(--sage-dark); border-color: var(--sage-dark); transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      transform: translateY(-2px);
+    }
 
     .btn-outline {
-      color: var(--charcoal); padding: 14px 24px; border-radius: 2px;
-      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--charcoal);
+      padding: 14px 24px;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       border: 2px solid var(--border);
       transition: border-color var(--transition), color var(--transition), transform 0.2s;
-      display: inline-flex; align-items: center; gap: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-    .btn-outline:hover { border-color: var(--charcoal); transform: translateY(-2px); }
-    .btn-outline svg { transition: transform var(--transition); }
-    .btn-outline:hover svg { transform: translateX(3px); }
+
+    .btn-outline:hover {
+      border-color: var(--charcoal);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline svg {
+      transition: transform var(--transition);
+    }
+
+    .btn-outline:hover svg {
+      transform: translateX(3px);
+    }
 
     .hero-stats {
-      display: flex; gap: 2rem; margin-top: 3rem; padding-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
       border-top: 1px solid var(--border);
-      opacity: 0; animation: fadeInUp 0.9s ease 1.1s forwards;
+      opacity: 0;
+      animation: fadeInUp 0.9s ease 1.1s forwards;
     }
+
     .stat-item {}
+
     .stat-num {
-      font-family: var(--font-display); font-size: 2rem; font-weight: 600;
-      color: var(--charcoal); line-height: 1;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1;
     }
-    .stat-label { font-size: 0.72rem; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
     /* Hero visual */
     .hero-visual {
-      position: relative; padding-top: 72px;
-      opacity: 0; animation: fadeInRight 1s ease 0.6s forwards;
+      position: relative;
+      padding-top: 60px;
+      opacity: 0;
+      animation: fadeInRight 1s ease 0.6s forwards;
     }
 
     @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     .hero-img-wrap {
-      position: relative; border-radius: 4px; overflow: hidden;
-      aspect-ratio: 4/5; max-height: 580px;
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      max-height: 580px;
       box-shadow: var(--shadow-lg);
     }
+
     .hero-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: transform 8s ease;
     }
-    .hero-img-wrap:hover img { transform: scale(1.03); }
+
+    .hero-img-wrap:hover img {
+      transform: scale(1.03);
+    }
+
     .hero-img-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, transparent 60%, rgba(42,42,40,0.3));
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(42, 42, 40, 0.3));
     }
 
     .hero-card {
-      position: absolute; bottom: 28px; left: -24px;
-      background: rgba(255,252,248,0.95); backdrop-filter: blur(12px);
-      padding: 16px 20px; border-radius: 3px; box-shadow: var(--shadow-md);
+      position: absolute;
+      bottom: 28px;
+      left: -24px;
+      background: rgba(255, 252, 248, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 16px 20px;
+      border-radius: 3px;
+      box-shadow: var(--shadow-md);
       min-width: 200px;
       animation: floatCard 5s ease-in-out infinite;
     }
+
     @keyframes floatCard {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
     }
-    .card-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--light); margin-bottom: 6px; }
-    .card-rating { display: flex; align-items: center; gap: 6px; }
-    .stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 1px; }
-    .rating-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--charcoal); }
-    .rating-sub { font-size: 0.7rem; color: var(--light); }
+
+    .card-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 6px;
+    }
+
+    .card-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .rating-num {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .rating-sub {
+      font-size: 0.7rem;
+      color: var(--light);
+    }
 
     .hero-badge-2 {
-      position: absolute; top: 28px; right: -16px;
-      background: var(--sage-dark); color: #fff;
-      padding: 12px 16px; border-radius: 3px;
-      text-align: center; box-shadow: var(--shadow-md);
+      position: absolute;
+      top: 28px;
+      right: -16px;
+      background: var(--sage-dark);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 3px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
       animation: floatCard 6s ease-in-out 1s infinite;
     }
-    .badge-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; line-height: 1; }
-    .badge-sub { font-size: 0.68rem; letter-spacing: 0.06em; opacity: 0.85; }
+
+    .badge-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .badge-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      opacity: 0.85;
+    }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: none; }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* ========== SECTION BASE ========== */
-    section { padding: 100px 5%; }
-    .container { max-width: 1280px; margin: 0 auto; }
+    section {
+      padding: 100px 5%;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
     .section-label {
-      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--sage-dark); font-weight: 500; margin-bottom: 12px;
-      display: flex; align-items: center; gap: 10px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+
     .section-label::before {
-      content: ''; display: block; width: 24px; height: 1px; background: var(--sage-dark);
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--sage-dark);
     }
+
     .section-title {
-      font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.4rem);
-      font-weight: 300; line-height: 1.15; color: var(--charcoal);
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--charcoal);
       letter-spacing: -0.01em;
     }
-    .section-title em { font-style: italic; color: var(--sage-dark); }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--sage-dark);
+    }
 
     /* ========== TRUST BAR ========== */
     #trust {
       padding: 24px 5%;
-      background: var(--charcoal); color: var(--cream);
+      background: var(--charcoal);
+      color: var(--cream);
     }
+
     .trust-inner {
-      max-width: 1280px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 1rem;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+
     .trust-item {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 0.78rem; letter-spacing: 0.08em; opacity: 0.85;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      opacity: 0.85;
     }
-    .trust-item svg { opacity: 0.6; flex-shrink: 0; }
+
+    .trust-item svg {
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
 
     /* ========== ABOUT ========== */
-    #about { background: var(--warm-white); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    #about {
+      background: var(--warm-white);
     }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
     .about-imgs {
       position: relative;
     }
+
     .about-img-main {
-      border-radius: 4px; overflow: hidden; aspect-ratio: 3/4;
-      box-shadow: var(--shadow-lg); position: relative; z-index: 1;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 1;
     }
-    .about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+
+    .about-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .about-img-accent {
-      position: absolute; bottom: -24px; right: -24px;
-      width: 55%; border-radius: 4px; overflow: hidden; aspect-ratio: 1;
-      box-shadow: var(--shadow-md); border: 4px solid var(--warm-white);
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 55%;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      box-shadow: var(--shadow-md);
+      border: 4px solid var(--warm-white);
       z-index: 2;
     }
-    .about-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+
+    .about-img-accent img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .about-pill {
-      position: absolute; top: 24px; left: -16px;
-      background: var(--gold); color: #fff; z-index: 3;
-      padding: 10px 16px; border-radius: 2px; font-size: 0.7rem;
-      letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500;
+      position: absolute;
+      top: 24px;
+      left: -16px;
+      background: var(--gold);
+      color: #fff;
+      z-index: 3;
+      padding: 10px 16px;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
       box-shadow: var(--shadow-sm);
     }
 
     .about-text {}
-    .about-text .section-title { margin-bottom: 1.4rem; }
-    .about-text p { color: var(--mid); line-height: 1.8; margin-bottom: 1.2rem; font-weight: 300; }
 
-    .values-list { margin: 2rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .about-text .section-title {
+      margin-bottom: 1.4rem;
+    }
+
+    .about-text p {
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+
+    .values-list {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     .value-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 16px; background: var(--cream); border-radius: 3px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      background: var(--cream);
+      border-radius: 3px;
       border-left: 3px solid var(--sage-light);
       transition: border-color var(--transition), box-shadow var(--transition);
     }
-    .value-item:hover { border-left-color: var(--sage-dark); box-shadow: var(--shadow-sm); }
-    .value-icon {
-      width: 36px; height: 36px; background: var(--sage-light);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; font-size: 1rem;
+
+    .value-item:hover {
+      border-left-color: var(--sage-dark);
+      box-shadow: var(--shadow-sm);
     }
-    .value-text h4 { font-size: 0.88rem; font-weight: 500; color: var(--charcoal); margin-bottom: 4px; }
-    .value-text p { font-size: 0.8rem; color: var(--light); margin: 0; line-height: 1.5; }
+
+    .value-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--sage-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--sage-dark);
+    }
+
+    .value-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+    }
+
+    .value-text h4 {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .value-text p {
+      font-size: 0.8rem;
+      color: var(--light);
+      margin: 0;
+      line-height: 1.5;
+    }
 
     /* ========== SERVICES ========== */
-    #services { background: var(--cream); }
-    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); }
+    #services {
+      background: var(--cream);
+    }
+
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
 
     .service-card {
-      background: var(--warm-white); padding: 40px 36px;
-      position: relative; overflow: hidden;
+      background: var(--warm-white);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
       transition: background var(--transition);
       cursor: default;
     }
+
     .service-card::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(143,169,138,0.06) 0%, transparent 60%);
-      opacity: 0; transition: opacity var(--transition);
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(143, 169, 138, 0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition);
     }
-    .service-card:hover::before { opacity: 1; }
-    .service-card:hover { background: var(--cream); }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card:hover {
+      background: var(--cream);
+    }
 
     .service-num {
-      font-family: var(--font-display); font-size: 0.75rem;
-      color: var(--light); letter-spacing: 0.08em; margin-bottom: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      color: var(--light);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
     }
+
     .service-icon {
-      width: 52px; height: 52px; margin-bottom: 1.4rem;
-      background: var(--sage-light); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
-      transition: background var(--transition), transform var(--transition);
+      width: 52px;
+      height: 52px;
+      margin-bottom: 1.4rem;
+      background: var(--sage-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sage-dark);
+      transition: background var(--transition), transform var(--transition), color var(--transition);
     }
-    .service-card:hover .service-icon { background: var(--sage); transform: scale(1.08); }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--sage);
+      transform: scale(1.08);
+      color: #fff;
+    }
+
     .service-card h3 {
-      font-family: var(--font-display); font-size: 1.35rem; font-weight: 400;
-      color: var(--charcoal); margin-bottom: 0.8rem; line-height: 1.25;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
     }
-    .service-card p { font-size: 0.84rem; color: var(--mid); line-height: 1.7; font-weight: 300; margin-bottom: 1.5rem; }
+
+    .service-card p {
+      font-size: 0.84rem;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
     .service-link {
-      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--sage-dark); display: flex; align-items: center; gap: 6px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
       transition: gap var(--transition);
     }
-    .service-card:hover .service-link { gap: 10px; }
+
+    .service-card:hover .service-link {
+      gap: 10px;
+    }
 
     /* ========== HOW IT WORKS ========== */
-    #process { background: var(--warm-white); }
-    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3.5rem; position: relative; }
+    #process {
+      background: var(--warm-white);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+      position: relative;
+    }
+
     .process-steps::before {
-      content: ''; position: absolute; top: 32px; left: 10%; right: 10%; height: 1px;
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
       background: linear-gradient(90deg, transparent, var(--border), var(--border), transparent);
     }
+
     .step {
-      text-align: center; position: relative;
+      text-align: center;
+      position: relative;
     }
+
     .step-circle {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: var(--warm-white); border: 2px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.4rem; font-size: 1.4rem;
-      position: relative; z-index: 1;
-      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--warm-white);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.4rem;
+      position: relative;
+      z-index: 1;
+      color: var(--charcoal);
+      transition: border-color var(--transition), background var(--transition), transform var(--transition), color var(--transition);
     }
-    .step:hover .step-circle { border-color: var(--sage); background: var(--cream); transform: scale(1.1); }
+
+    .step-circle svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .step:hover .step-circle {
+      border-color: var(--sage);
+      background: var(--cream);
+      transform: scale(1.1);
+      color: var(--sage-dark);
+    }
+
     .step-num {
-      position: absolute; top: -8px; right: -8px;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--sage-dark); color: #fff; font-size: 0.65rem; font-weight: 500;
-      display: flex; align-items: center; justify-content: center;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--sage-dark);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .step h4 { font-size: 0.95rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.6rem; }
-    .step p { font-size: 0.8rem; color: var(--light); line-height: 1.6; }
+
+    .step h4 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .step p {
+      font-size: 0.8rem;
+      color: var(--light);
+      line-height: 1.6;
+    }
 
     /* ========== TREATMENTS ========== */
-    #treatments { background: var(--charcoal); color: var(--cream); padding: 100px 5%; }
-    #treatments .section-label { color: var(--sage-light); }
-    #treatments .section-label::before { background: var(--sage-light); }
-    #treatments .section-title { color: var(--cream); }
-    #treatments .section-title em { color: var(--blush); }
+    #treatments {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 100px 5%;
+    }
 
-    .treatments-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 3.5rem; background: rgba(255,255,255,0.06); }
+    #treatments .section-label {
+      color: var(--sage-light);
+    }
+
+    #treatments .section-label::before {
+      background: var(--sage-light);
+    }
+
+    #treatments .section-title {
+      color: var(--cream);
+    }
+
+    #treatments .section-title em {
+      color: var(--blush);
+    }
+
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 3.5rem;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
     .treatment-item {
-      padding: 36px 40px; background: var(--charcoal);
-      display: flex; gap: 2rem; align-items: flex-start;
+      padding: 36px 40px;
+      background: var(--charcoal);
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
       transition: background var(--transition);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .treatment-item:hover { background: rgba(255,255,255,0.04); }
+
+    .treatment-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
     .treatment-num {
-      font-family: var(--font-display); font-size: 2.5rem; font-weight: 300;
-      color: rgba(255,255,255,0.08); line-height: 1; flex-shrink: 0; min-width: 60px;
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.08);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 60px;
     }
-    .treatment-info h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; color: var(--cream); margin-bottom: 0.5rem; }
-    .treatment-info p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 0.8rem; font-weight: 300; }
+
+    .treatment-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .treatment-info p {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+      font-weight: 300;
+    }
+
     .treatment-tag {
-      display: inline-block; background: rgba(143,169,138,0.2);
-      color: var(--sage-light); font-size: 0.68rem; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+      display: inline-block;
+      background: rgba(143, 169, 138, 0.2);
+      color: var(--sage-light);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
     }
 
     /* ========== TESTIMONIALS ========== */
-    #testimonials { background: var(--cream); }
-    .testimonials-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    #testimonials {
+      background: var(--cream);
+    }
 
-    .testimonial-track-wrap { overflow: hidden; }
+    .testimonials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .testimonial-track-wrap {
+      overflow: hidden;
+    }
+
     .testimonial-track {
-      display: flex; gap: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
       transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
+
     .testimonial-card {
-      flex: 0 0 calc(33.33% - 1rem); min-width: 0;
-      background: var(--warm-white); padding: 36px;
-      border-radius: 4px; border: 1px solid var(--border);
-      position: relative; overflow: hidden;
+      flex: 0 0 calc(33.33% - 1rem);
+      min-width: 0;
+      background: var(--warm-white);
+      padding: 36px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: box-shadow var(--transition), transform var(--transition);
     }
-    .testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .testimonial-card::before {
-      content: '\201C'; position: absolute; top: 16px; right: 24px;
-      font-family: var(--font-display); font-size: 6rem; color: var(--border); line-height: 1;
+
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
     }
-    .t-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; }
-    .t-text { font-size: 0.9rem; color: var(--mid); line-height: 1.75; font-style: italic; font-weight: 300; margin-bottom: 1.5rem; }
-    .t-author { display: flex; align-items: center; gap: 12px; }
+
+    .testimonial-card::before {
+      display: none;
+    }
+
+    .t-google-logo {
+      width: 18px;
+      height: 18px;
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+
+    .review-source {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--light);
+      font-weight: 500;
+      margin-top: 1rem;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .review-source svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--sage-dark);
+    }
+
+    .review-date {
+      font-size: 0.7rem;
+      color: var(--light);
+      margin-left: auto;
+    }
+
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(66, 133, 244, 0.06);
+      border: 1px solid rgba(66, 133, 244, 0.15);
+      padding: 3px 8px;
+      border-radius: 100px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #4285F4;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 1rem;
+      width: fit-content;
+    }
+
+    .t-stars {
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    .t-text {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.75;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
     .t-avatar {
-      width: 42px; height: 42px; border-radius: 50%; background: var(--sage-light);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: var(--sage-dark);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--sage-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--sage-dark);
       flex-shrink: 0;
     }
-    .t-name { font-size: 0.85rem; font-weight: 500; color: var(--charcoal); }
-    .t-title { font-size: 0.72rem; color: var(--light); }
 
-    .slider-controls { display: flex; gap: 0.8rem; align-items: center; }
+    .t-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    .t-title {
+      font-size: 0.72rem;
+      color: var(--light);
+    }
+
+    .slider-controls {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
     .slider-btn {
-      width: 40px; height: 40px; border-radius: 50%;
-      border: 1px solid var(--border); background: var(--warm-white);
-      display: flex; align-items: center; justify-content: center; cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
       transition: background var(--transition), border-color var(--transition);
     }
-    .slider-btn:hover { background: var(--charcoal); border-color: var(--charcoal); }
-    .slider-btn:hover svg { stroke: #fff; }
-    .slider-btn svg { transition: stroke 0.2s; }
+
+    .slider-btn:hover {
+      background: var(--charcoal);
+      border-color: var(--charcoal);
+    }
+
+    .slider-btn:hover svg {
+      stroke: #fff;
+    }
+
+    .slider-btn svg {
+      transition: stroke 0.2s;
+    }
 
     /* ========== TEAM ========== */
-    #team { background: var(--warm-white); }
-    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    #team {
+      background: var(--warm-white);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
     .team-card {
       text-align: center;
       transition: transform var(--transition);
     }
-    .team-card:hover { transform: translateY(-6px); }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+    }
+
     .team-img {
-      aspect-ratio: 3/4; border-radius: 4px; overflow: hidden;
-      margin-bottom: 1.2rem; background: var(--cream); position: relative;
+      aspect-ratio: 3/4;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      background: var(--cream);
+      position: relative;
     }
-    .team-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .team-card:hover .team-img img { transform: scale(1.04); }
+
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .team-card:hover .team-img img {
+      transform: scale(1.04);
+    }
+
     .team-overlay {
-      position: absolute; inset: 0; background: rgba(42,42,40,0.55);
-      display: flex; align-items: center; justify-content: center; gap: 1rem;
-      opacity: 0; transition: opacity var(--transition);
+      position: absolute;
+      inset: 0;
+      background: rgba(42, 42, 40, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      opacity: 0;
+      transition: opacity var(--transition);
     }
-    .team-card:hover .team-overlay { opacity: 1; }
+
+    .team-card:hover .team-overlay {
+      opacity: 1;
+    }
+
     .team-social {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-size: 0.75rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
       transition: background 0.2s;
     }
-    .team-social:hover { background: var(--sage-dark); }
-    .team-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--charcoal); margin-bottom: 4px; }
-    .team-role { font-size: 0.75rem; color: var(--light); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .team-social:hover {
+      background: var(--sage-dark);
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.75rem;
+      color: var(--light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
     /* ========== BOOKING CTA ========== */
     #booking {
-      background: var(--cream); padding: 100px 5%;
+      background: var(--cream);
+      padding: 100px 5%;
     }
+
     .booking-inner {
-      max-width: 900px; margin: 0 auto; text-align: center;
-      background: var(--charcoal); border-radius: 6px;
-      padding: 70px 60px; position: relative; overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--charcoal);
+      border-radius: 6px;
+      padding: 70px 60px;
+      position: relative;
+      overflow: hidden;
     }
+
     .booking-inner::before {
-      content: ''; position: absolute;
-      width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(143,169,138,0.2) 0%, transparent 70%);
-      top: -100px; right: -100px; pointer-events: none;
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(143, 169, 138, 0.2) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
     }
-    .booking-inner .section-label { justify-content: center; color: var(--sage-light); }
-    .booking-inner .section-label::before { background: var(--sage-light); }
-    .booking-inner .section-title { color: var(--cream); margin: 0 auto 1.2rem; max-width: 600px; }
-    .booking-inner .section-title em { color: var(--blush); }
-    .booking-inner p { color: rgba(255,255,255,0.55); font-weight: 300; max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.75; }
-    .booking-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .booking-inner .section-label {
+      justify-content: center;
+      color: var(--sage-light);
+    }
+
+    .booking-inner .section-label::before {
+      background: var(--sage-light);
+    }
+
+    .booking-inner .section-title {
+      color: var(--cream);
+      margin: 0 auto 1.2rem;
+      max-width: 600px;
+    }
+
+    .booking-inner .section-title em {
+      color: var(--blush);
+    }
+
+    .booking-inner p {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+
+    .booking-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     .btn-cream {
-      background: var(--cream); color: var(--charcoal);
-      padding: 14px 32px; border-radius: 2px;
-      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--cream);
+      color: var(--charcoal);
+      padding: 14px 32px;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       border: 2px solid var(--cream);
       transition: background var(--transition), transform 0.2s;
-      display: inline-block; cursor: pointer;
+      display: inline-block;
+      cursor: pointer;
     }
-    .btn-cream:hover { background: transparent; color: var(--cream); transform: translateY(-2px); }
+
+    .btn-cream:hover {
+      background: transparent;
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
+
     .btn-ghost {
-      color: rgba(255,255,255,0.7); padding: 14px 24px; border-radius: 2px;
-      font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
-      border: 2px solid rgba(255,255,255,0.2);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 14px 24px;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 2px solid rgba(255, 255, 255, 0.2);
       transition: border-color var(--transition), color var(--transition), transform 0.2s;
-      display: inline-block; cursor: pointer;
+      display: inline-block;
+      cursor: pointer;
     }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #fff; transform: translateY(-2px); }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+      transform: translateY(-2px);
+    }
 
     /* ========== FAQ ========== */
-    #faq { background: var(--warm-white); }
-    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem; }
-    .faq-list { display: flex; flex-direction: column; gap: 0; }
-    .faq-item { border-bottom: 1px solid var(--border); }
+    #faq {
+      background: var(--warm-white);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 3.5rem;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
     .faq-q {
-      width: 100%; background: none; border: none; text-align: left;
-      padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
-      cursor: pointer; gap: 1rem;
-      font-family: var(--font-body); font-size: 0.92rem; font-weight: 500;
-      color: var(--charcoal); transition: color var(--transition);
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      transition: color var(--transition);
     }
-    .faq-q:hover { color: var(--sage-dark); }
+
+    .faq-q:hover {
+      color: var(--sage-dark);
+    }
+
     .faq-icon {
-      width: 24px; height: 24px; border-radius: 50%;
-      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
     }
-    .faq-item.open .faq-icon { background: var(--sage-dark); border-color: var(--sage-dark); transform: rotate(45deg); }
-    .faq-icon span { font-size: 1rem; line-height: 1; color: var(--mid); transition: color var(--transition); }
-    .faq-item.open .faq-icon span { color: #fff; }
+
+    .faq-item.open .faq-icon {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      transform: rotate(45deg);
+    }
+
+    .faq-icon span {
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--mid);
+      transition: color var(--transition);
+    }
+
+    .faq-item.open .faq-icon span {
+      color: #fff;
+    }
+
     .faq-a {
-      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
     }
-    .faq-item.open .faq-a { max-height: 300px; }
-    .faq-a p { font-size: 0.84rem; color: var(--mid); line-height: 1.75; padding-bottom: 20px; font-weight: 300; }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+    }
+
+    .faq-a p {
+      font-size: 0.84rem;
+      color: var(--mid);
+      line-height: 1.75;
+      padding-bottom: 20px;
+      font-weight: 300;
+    }
 
     .faq-contact {
-      background: var(--cream); border-radius: 4px; padding: 40px;
-      position: sticky; top: 100px;
+      background: var(--cream);
+      border-radius: 4px;
+      padding: 40px;
+      position: sticky;
+      top: 100px;
     }
-    .faq-contact h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; margin-bottom: 0.8rem; }
-    .faq-contact p { font-size: 0.84rem; color: var(--mid); line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300; }
-    .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-size: 0.84rem; color: var(--mid); }
-    .contact-item svg { color: var(--sage-dark); flex-shrink: 0; }
+
+    .faq-contact h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-contact p {
+      font-size: 0.84rem;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      font-size: 0.84rem;
+      color: var(--mid);
+    }
+
+    .contact-item svg {
+      color: var(--sage-dark);
+      flex-shrink: 0;
+    }
 
     /* ========== FOOTER ========== */
     footer {
-      background: var(--charcoal); color: var(--cream); padding: 70px 5% 30px;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 70px 5% 30px;
     }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
     .footer-brand {}
-    .footer-logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; margin-bottom: 1rem; }
-    .footer-logo span { color: var(--gold); }
-    .footer-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 260px; margin-bottom: 1.5rem; font-weight: 300; }
-    .footer-socials { display: flex; gap: 0.8rem; }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo span {
+      color: var(--gold);
+    }
+
+    .footer-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.75;
+      max-width: 260px;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.8rem;
+    }
+
     .social-btn {
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.15);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
       transition: border-color var(--transition), color var(--transition), background var(--transition);
     }
-    .social-btn:hover { border-color: var(--sage); color: var(--sage-light); background: rgba(143,169,138,0.1); }
-    .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.2rem; }
-    .footer-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col ul li a { font-size: 0.84rem; color: rgba(255,255,255,0.55); transition: color var(--transition); }
-    .footer-col ul li a:hover { color: var(--cream); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+
+    .social-btn svg {
+      width: 16px;
+      height: 16px;
+      display: block;
     }
-    .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+    .social-btn:hover {
+      border-color: var(--sage);
+      color: var(--sage-light);
+      background: rgba(143, 169, 138, 0.1);
+    }
+
+    .footer-col h4 {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.55);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--cream);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.3);
+    }
 
     /* Schema markup helper */
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
 
     /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
-      .hero-content { grid-template-columns: 1fr; max-width: 620px; text-align: center; }
-      .hero-text { padding-top: 100px; }
-      .hero-desc { max-width: 100%; }
-      .hero-actions { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .hero-visual { padding-top: 0; }
-      .hero-img-wrap { max-height: 420px; aspect-ratio: 16/9; }
-      .hero-card { left: 16px; bottom: 16px; }
-      .hero-badge-2 { top: 16px; right: 16px; }
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .about-imgs { max-width: 480px; margin: 0 auto; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .process-steps { grid-template-columns: repeat(2, 1fr); }
-      .process-steps::before { display: none; }
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-content {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding-top: 100px;
+      }
+
+      .hero-desc {
+        max-width: 100%;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        padding-top: 0;
+      }
+
+      .hero-img-wrap {
+        max-height: 420px;
+        aspect-ratio: 16/9;
+      }
+
+      .hero-card {
+        left: 16px;
+        bottom: 16px;
+      }
+
+      .hero-badge-2 {
+        top: 16px;
+        right: 16px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-imgs {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-steps::before {
+        display: none;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .mobile-menu { display: flex; }
-      section { padding: 70px 5%; }
-      .services-grid { grid-template-columns: 1fr; }
-      .treatments-grid { grid-template-columns: 1fr; }
-      .testimonial-card { flex: 0 0 85%; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .faq-contact { position: relative; top: 0; }
-      .booking-inner { padding: 48px 28px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .treatments-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-card {
+        flex: 0 0 85%;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-contact {
+        position: relative;
+        top: 0;
+      }
+
+      .booking-inner {
+        padding: 48px 28px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero-stats { gap: 1.2rem; }
-      .process-steps { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-stats {
+        gap: 1.2rem;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 
@@ -769,19 +2080,19 @@
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Lumière Skin Clinic",
-    "description": "Advanced, ethical skincare and dermatology clinic offering personalized treatments.",
+    "description": "Advanced, ethical skincare and dermatology clinic customized for Indian skin. Led by board-certified dermatologists in Bengaluru.",
     "url": "https://lumiereskin.com",
-    "telephone": "+1-800-LUMIERE",
+    "telephone": "+91-80-4952-8000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "42 Park Avenue",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "postalCode": "10016",
-      "addressCountry": "US"
+      "streetAddress": "1st Floor, 80 Feet Road, Indiranagar",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560038",
+      "addressCountry": "IN"
     },
-    "openingHours": "Mo-Sa 09:00-19:00",
-    "priceRange": "$$",
+    "openingHours": "Mo-Sa 09:00-20:00",
+    "priceRange": "₹₹₹",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
@@ -793,752 +2104,1140 @@
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-logo" aria-label="Lumière Skin Clinic Home">
-    <span>Lumière</span>
-    <span>Skin Clinic</span>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Lumière Skin Clinic Home">
+      <span>Lumièra</span>
+      <span>Skin Clinic</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="#about" role="menuitem">About</a></li>
+      <li role="none"><a href="#services" role="menuitem">Services</a></li>
+      <li role="none"><a href="#treatments" role="menuitem">Treatments</a></li>
+      <li role="none"><a href="#team" role="menuitem">Team</a></li>
+      <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+      <li role="none"><a href="#booking" class="nav-cta" role="menuitem">Book Now</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919900000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12.012 2c-5.508 0-9.988 4.48-9.988 9.988 0 1.76.46 3.48 1.332 5l-1.416 5.176 5.296-1.392c1.472.8 3.12 1.22 4.8 1.22 5.508 0 9.992-4.484 9.992-9.992-.004-5.508-4.484-9.988-9.996-9.988zm5.836 14.124c-.244.688-1.22 1.272-1.684 1.344-.44.072-.988.104-2.836-.66-2.368-.976-3.888-3.38-4.008-3.54-.116-.16-.976-1.304-.976-2.484 0-1.18.608-1.76.82-2 .216-.24.472-.3.628-.3.156 0 .312.004.448.008.14.004.324-.052.508.396.188.46.64 1.56.696 1.676.056.116.092.252.016.4-.076.152-.152.248-.24.352-.088.104-.188.232-.268.312-.088.088-.18.184-.076.36.104.18.464.768.992 1.24.684.6 1.256.788 1.432.876.18.088.284.072.392-.052.104-.124.452-.524.572-.7.12-.18.24-.152.4-.092.164.06 1.036.488 1.212.576.176.088.292.132.336.208.044.076.044.444-.2.112z" />
+    </svg>
   </a>
 
-  <ul class="nav-links" role="menubar">
-    <li role="none"><a href="#about" role="menuitem">About</a></li>
-    <li role="none"><a href="#services" role="menuitem">Services</a></li>
-    <li role="none"><a href="#treatments" role="menuitem">Treatments</a></li>
-    <li role="none"><a href="#team" role="menuitem">Team</a></li>
-    <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
-    <li role="none"><a href="#booking" class="nav-cta" role="menuitem">Book Now</a></li>
-  </ul>
 
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#treatments" onclick="closeMobile()">Treatments</a>
+    <a href="#team" onclick="closeMobile()">Team</a>
+    <a href="#faq" onclick="closeMobile()">FAQ</a>
+    <a href="#booking" class="mob-cta" onclick="closeMobile()">Book Consultation</a>
+  </div>
 
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#services" onclick="closeMobile()">Services</a>
-  <a href="#treatments" onclick="closeMobile()">Treatments</a>
-  <a href="#team" onclick="closeMobile()">Team</a>
-  <a href="#faq" onclick="closeMobile()">FAQ</a>
-  <a href="#booking" class="mob-cta" onclick="closeMobile()">Book Consultation</a>
-</div>
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-bg"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+    <div class="particles" id="particles" aria-hidden="true"></div>
 
-<!-- ===== HERO ===== -->
-<section id="hero" aria-label="Hero section">
-  <div class="hero-bg"></div>
-  <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
-  <div class="particles" id="particles" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge" role="note">
+          <div class="dot"></div>
+          <span>Dermatologist Approved Clinic</span>
+        </div>
 
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-badge" role="note">
-        <div class="dot"></div>
-        <span>Dermatologist Approved Clinic</span>
+        <h1 class="hero-h1">
+          Your skin deserves<br>
+          <span class="line-accent"><em>science-backed</em></span>
+          <span class="underline-anim">care.</span>
+        </h1>
+
+        <p class="hero-desc">
+          At Lumière, we combine cutting-edge dermatology with ethical, cruelty-free practices customized specifically
+          for Indian skin types. Every treatment is personalised to your unique skin story.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn-primary">Book Consultation</a>
+          <a href="#services" class="btn-outline">
+            Explore Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-stats" role="list" aria-label="Clinic statistics">
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Years Practice</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">15K</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
       </div>
 
-      <h1 class="hero-h1">
-        Your skin deserves<br>
-        <span class="line-accent"><em>science-backed</em></span>
-        <span class="underline-anim">care.</span>
-      </h1>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop"
+            alt="Skincare professional performing facial treatment" width="800" height="1000" loading="eager" />
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-card">
+          <div class="card-label">Client Reviews</div>
+          <div class="card-rating">
+            <div class="stars">★★★★★</div>
+            <div>
+              <div class="rating-num">4.9</div>
+              <div class="rating-sub">1,840 reviews</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-badge-2">
+          <div class="badge-num">100%</div>
+          <div class="badge-sub">Cruelty-Free</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p class="hero-desc">
-        At Lumière, we combine cutting-edge dermatology with ethical, cruelty-free practices. Every treatment is personalised to your unique skin story.
-      </p>
+  <!-- ===== TRUST BAR ===== -->
+  <div id="trust" role="list" aria-label="Trust indicators">
+    <div class="trust-inner">
+      <div class="trust-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <span>MD Dermatologists (IADVL Registered)</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4l3 3" />
+        </svg>
+        <span>Same-Day Consultations</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        <span>100% Cruelty-Free Topicals</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
+        </svg>
+        <span>US FDA Cleared Technologies</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+        <span>Tailored Indian Skin Plans</span>
+      </div>
+    </div>
+  </div>
 
-      <div class="hero-actions">
-        <a href="#booking" class="btn-primary">Book Consultation</a>
-        <a href="#services" class="btn-outline">
-          Explore Services
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-imgs reveal-left">
+          <div class="about-pill">Est. 2012</div>
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=75&auto=format&fit=crop"
+              alt="Skincare clinic interior consultation room" width="600" height="800" loading="lazy" />
+          </div>
+          <div class="about-img-accent">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=300&q=75&auto=format&fit=crop"
+              alt="Skincare products and tools" width="300" height="300" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <p class="section-label">Our Philosophy</p>
+          <h2 class="section-title">Skin health rooted in <em>ethics</em> & science</h2>
+          <p>Lumière was founded on a simple belief: everyone deserves access to transparent, evidence-based skincare
+            without the pressure, gimmicks, or unrealistic promises.</p>
+          <p>Our team of MD dermatologists and certified aesthetic therapists specialize in South Asian skin types,
+            working together to build treatment plans as unique as your skin — because no two skin stories are the same.
+          </p>
+
+          <div class="values-list" role="list">
+            <div class="value-item" role="listitem">
+              <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 9.5a7 7 0 0 1-8 8.5z" />
+                  <path d="M19 2L11 10" />
+                </svg></div>
+              <div class="value-text">
+                <h4>100% Cruelty-Free</h4>
+                <p>Every product we use is ethically sourced and never tested on animals.</p>
+              </div>
+            </div>
+            <div class="value-item" role="listitem">
+              <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h12M18 21H6L12 9l6 12zM12 3v6" />
+                </svg></div>
+              <div class="value-text">
+                <h4>Evidence-Based Care</h4>
+                <p>All treatments are supported by peer-reviewed dermatological research.</p>
+              </div>
+            </div>
+            <div class="value-item" role="listitem">
+              <div class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 11 2 2 4-4" />
+                </svg></div>
+              <div class="value-text">
+                <h4>Transparent Pricing</h4>
+                <p>No hidden fees, no upselling — just honest consultations and fair costs.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn-primary" style="margin-top:0.5rem; display:inline-block;">Meet Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <p class="section-label reveal">What We Offer</p>
+          <h2 class="section-title reveal">Treatments for every<br><em>skin journey</em></h2>
+        </div>
+        <a href="#booking" class="btn-outline reveal">
+          See All Services
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
       </div>
 
-      <div class="hero-stats" role="list" aria-label="Clinic statistics">
-        <div class="stat-item" role="listitem">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">Years Practice</div>
-        </div>
-        <div class="stat-item" role="listitem">
-          <div class="stat-num">15K</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div class="stat-item" role="listitem">
-          <div class="stat-num">98%</div>
-          <div class="stat-label">Satisfaction Rate</div>
-        </div>
+      <div class="services-grid" role="list">
+        <article class="service-card reveal" role="listitem">
+          <div class="service-num">01</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z" />
+            </svg></div>
+          <h3>Hydration & Sun Recovery</h3>
+          <p>Deep moisture infusion treatments targeting dry, tanned, and sun-exposed skin using hyaluronic acid and
+            specialized recovery complexes.</p>
+          <span class="service-link" aria-label="Learn more about Hydration & Sun Recovery">Learn More →</span>
+        </article>
+        <article class="service-card reveal" role="listitem" style="transition-delay:0.1s">
+          <div class="service-num">02</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+            </svg></div>
+          <h3>Bridal Radiance Prep</h3>
+          <p>Premium, multi-month skin-perfecting regimens designed for brides-to-be, combining glow therapy, lasers,
+            and peels.</p>
+          <span class="service-link">Learn More →</span>
+        </article>
+        <article class="service-card reveal" role="listitem" style="transition-delay:0.2s">
+          <div class="service-num">03</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg></div>
+          <h3>Acne & Blemish Care</h3>
+          <p>Personalised acne management programmes combining professional extraction, light therapy, and targeted
+            actives.</p>
+          <span class="service-link">Learn More →</span>
+        </article>
+        <article class="service-card reveal" role="listitem" style="transition-delay:0.05s">
+          <div class="service-num">04</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M14.83 9.17l2.83-2.83" />
+            </svg></div>
+          <h3>Pigmentation & Melasma Care</h3>
+          <p>Advanced protocols using vitamin C, niacinamide, and laser therapies to safely address melasma, PIH, and
+            skin tanning.</p>
+          <span class="service-link">Learn More →</span>
+        </article>
+        <article class="service-card reveal" role="listitem" style="transition-delay:0.15s">
+          <div class="service-num">05</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 10.5C5 7.5 7.5 5 11 5s6 2.5 6.5 5.5" />
+              <path d="M19.5 13.5c-.5 3-3 5.5-6.5 5.5s-6-2.5-6.5-5.5" />
+              <path d="m12 6 1 2M11 16l1 2M8 7.5l1.5 2M14.5 14.5l1.5 2M6 10l2 1.5M16 12.5l2 1.5" />
+            </svg></div>
+          <h3>Medical Dermatology</h3>
+          <p>Diagnosis and treatment of eczema, psoriasis, rosacea, and other chronic skin conditions by our specialist
+            MD team.</p>
+          <span class="service-link">Learn More →</span>
+        </article>
+        <article class="service-card reveal" role="listitem" style="transition-delay:0.25s">
+          <div class="service-num">06</div>
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              <line x1="16" x2="16" y1="2" y2="6" />
+              <line x1="8" x2="8" y1="2" y2="6" />
+              <line x1="3" x2="21" y1="10" y2="10" />
+              <path d="m9 16 2 2 4-4" />
+            </svg></div>
+          <h3>Skin Analysis & Planning</h3>
+          <p>Advanced AI-assisted skin diagnostics followed by a bespoke 3-month treatment roadmap tailored to your
+            goals.</p>
+          <span class="service-link">Learn More →</span>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-img-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop"
-          alt="Skincare professional performing facial treatment"
-          width="800" height="1000"
-          loading="eager"
-        />
-        <div class="hero-img-overlay"></div>
-      </div>
-      <div class="hero-card">
-        <div class="card-label">Client Reviews</div>
-        <div class="card-rating">
-          <div class="stars">★★★★★</div>
-          <div>
-            <div class="rating-num">4.9</div>
-            <div class="rating-sub">1,840 reviews</div>
+  <!-- ===== PROCESS ===== -->
+  <section id="process">
+    <div class="container">
+      <p class="section-label reveal">How It Works</p>
+      <h2 class="section-title reveal">Your journey to<br><em>glowing skin</em></h2>
+
+      <div class="process-steps">
+        <div class="step reveal">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              <line x1="16" x2="16" y1="2" y2="6" />
+              <line x1="8" x2="8" y1="2" y2="6" />
+              <line x1="3" x2="21" y1="10" y2="10" />
+            </svg>
+            <div class="step-num">1</div>
           </div>
+          <h4>Book Consultation</h4>
+          <p>Choose a time online or call us. First visits include a full skin assessment.</p>
         </div>
-      </div>
-      <div class="hero-badge-2">
-        <div class="badge-num">100%</div>
-        <div class="badge-sub">Cruelty-Free</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TRUST BAR ===== -->
-<div id="trust" role="list" aria-label="Trust indicators">
-  <div class="trust-inner">
-    <div class="trust-item" role="listitem">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span>Board-Certified Dermatologists</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      <span>Same-Day Appointments Available</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      <span>Cruelty-Free & Sustainable Products</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      <span>FDA-Approved Treatments</span>
-    </div>
-    <div class="trust-item" role="listitem">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <span>Personalised Skin Plans</span>
-    </div>
-  </div>
-</div>
-
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-imgs reveal-left">
-        <div class="about-pill">Est. 2012</div>
-        <div class="about-img-main">
-          <img
-            src="https://images.unsplash.com/photo-1581750443834-a4b49df5f374?w=600&q=75&auto=format&fit=crop"
-            alt="Skincare clinic interior consultation room"
-            width="600" height="800"
-            loading="lazy"
-          />
-        </div>
-        <div class="about-img-accent">
-          <img
-            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=300&q=75&auto=format&fit=crop"
-            alt="Skincare products and tools"
-            width="300" height="300"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div class="about-text reveal-right">
-        <p class="section-label">Our Philosophy</p>
-        <h2 class="section-title">Skin health rooted in <em>ethics</em> & science</h2>
-        <p>Lumière was founded on a simple belief: everyone deserves access to transparent, evidence-based skincare without the pressure, gimmicks, or unrealistic promises.</p>
-        <p>Our team of board-certified dermatologists and licensed aestheticians work together to build treatment plans as unique as your skin — because no two people are the same.</p>
-
-        <div class="values-list" role="list">
-          <div class="value-item" role="listitem">
-            <div class="value-icon" aria-hidden="true">🌿</div>
-            <div class="value-text">
-              <h4>100% Cruelty-Free</h4>
-              <p>Every product we use is ethically sourced and never tested on animals.</p>
-            </div>
+        <div class="step reveal" style="transition-delay:0.15s">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <div class="step-num">2</div>
           </div>
-          <div class="value-item" role="listitem">
-            <div class="value-icon" aria-hidden="true">🔬</div>
-            <div class="value-text">
-              <h4>Evidence-Based Care</h4>
-              <p>All treatments are supported by peer-reviewed dermatological research.</p>
-            </div>
+          <h4>Skin Analysis</h4>
+          <p>Our dermatologist uses clinical-grade imaging to diagnose your skin profile.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:0.3s">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" x2="8" y1="13" y2="13" />
+              <line x1="16" x2="8" y1="17" y2="17" />
+              <line x1="10" x2="8" y1="9" y2="9" />
+            </svg>
+            <div class="step-num">3</div>
           </div>
-          <div class="value-item" role="listitem">
-            <div class="value-icon" aria-hidden="true">🤝</div>
-            <div class="value-text">
-              <h4>Transparent Pricing</h4>
-              <p>No hidden fees, no upselling — just honest consultations and fair costs.</p>
-            </div>
+          <h4>Personalised Plan</h4>
+          <p>Receive a custom treatment plan with transparent timelines and pricing.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:0.45s">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <div class="step-num">4</div>
           </div>
+          <h4>Transform & Maintain</h4>
+          <p>Ongoing care and check-ins to track progress and adjust your plan.</p>
         </div>
-
-        <a href="#booking" class="btn-primary" style="margin-top:0.5rem; display:inline-block;">Meet Our Team</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <div class="container">
-    <div class="services-header">
-      <div>
-        <p class="section-label reveal">What We Offer</p>
-        <h2 class="section-title reveal">Treatments for every<br><em>skin journey</em></h2>
-      </div>
-      <a href="#booking" class="btn-outline reveal">
-        See All Services
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
+  <!-- ===== TREATMENTS ===== -->
+  <section id="treatments">
+    <div class="container">
+      <p class="section-label reveal">Advanced Options</p>
+      <h2 class="section-title reveal">Clinical-grade <em>treatments</em></h2>
+      <p class="reveal"
+        style="color:rgba(255,255,255,0.5); max-width:540px; font-weight:300; line-height:1.75; margin-top:0.8rem;">
+        All procedures are performed by licensed professionals in a sterile, clinical environment using FDA-cleared
+        technology.
+      </p>
 
-    <div class="services-grid" role="list">
-      <article class="service-card reveal" role="listitem">
-        <div class="service-num">01</div>
-        <div class="service-icon" aria-hidden="true">💧</div>
-        <h3>Hydration Therapy</h3>
-        <p>Deep moisture infusion treatments targeting dry, dehydrated skin using hyaluronic acid and botanical complexes.</p>
-        <span class="service-link" aria-label="Learn more about Hydration Therapy">Learn More →</span>
-      </article>
-      <article class="service-card reveal" role="listitem" style="transition-delay:0.1s">
-        <div class="service-num">02</div>
-        <div class="service-icon" aria-hidden="true">✨</div>
-        <h3>Anti-Aging Facials</h3>
-        <p>Collagen-stimulating treatments combining peptide technology and micro-current to visibly lift and firm skin.</p>
-        <span class="service-link">Learn More →</span>
-      </article>
-      <article class="service-card reveal" role="listitem" style="transition-delay:0.2s">
-        <div class="service-num">03</div>
-        <div class="service-icon" aria-hidden="true">🌸</div>
-        <h3>Acne & Blemish Care</h3>
-        <p>Personalised acne management programmes combining professional extraction, light therapy, and targeted actives.</p>
-        <span class="service-link">Learn More →</span>
-      </article>
-      <article class="service-card reveal" role="listitem" style="transition-delay:0.05s">
-        <div class="service-num">04</div>
-        <div class="service-icon" aria-hidden="true">☀️</div>
-        <h3>Pigmentation Treatment</h3>
-        <p>Brightening protocols using vitamin C, niacinamide, and laser-assisted therapies to even skin tone safely.</p>
-        <span class="service-link">Learn More →</span>
-      </article>
-      <article class="service-card reveal" role="listitem" style="transition-delay:0.15s">
-        <div class="service-num">05</div>
-        <div class="service-icon" aria-hidden="true">🧬</div>
-        <h3>Medical Dermatology</h3>
-        <p>Diagnosis and treatment of eczema, psoriasis, rosacea, and other chronic skin conditions by our board-certified team.</p>
-        <span class="service-link">Learn More →</span>
-      </article>
-      <article class="service-card reveal" role="listitem" style="transition-delay:0.25s">
-        <div class="service-num">06</div>
-        <div class="service-icon" aria-hidden="true">🌙</div>
-        <h3>Skin Analysis & Planning</h3>
-        <p>Advanced AI-assisted skin diagnostics followed by a bespoke 3-month treatment roadmap tailored to your goals.</p>
-        <span class="service-link">Learn More →</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS ===== -->
-<section id="process">
-  <div class="container">
-    <p class="section-label reveal">How It Works</p>
-    <h2 class="section-title reveal">Your journey to<br><em>glowing skin</em></h2>
-
-    <div class="process-steps">
-      <div class="step reveal">
-        <div class="step-circle">
-          <span aria-hidden="true">📋</span>
-          <div class="step-num">1</div>
-        </div>
-        <h4>Book Consultation</h4>
-        <p>Choose a time online or call us. First visits include a full skin assessment.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:0.15s">
-        <div class="step-circle">
-          <span aria-hidden="true">🔍</span>
-          <div class="step-num">2</div>
-        </div>
-        <h4>Skin Analysis</h4>
-        <p>Our dermatologist uses clinical-grade imaging to diagnose your skin profile.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:0.3s">
-        <div class="step-circle">
-          <span aria-hidden="true">📝</span>
-          <div class="step-num">3</div>
-        </div>
-        <h4>Personalised Plan</h4>
-        <p>Receive a custom treatment plan with transparent timelines and pricing.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:0.45s">
-        <div class="step-circle">
-          <span aria-hidden="true">🌟</span>
-          <div class="step-num">4</div>
-        </div>
-        <h4>Transform & Maintain</h4>
-        <p>Ongoing care and check-ins to track progress and adjust your plan.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TREATMENTS ===== -->
-<section id="treatments">
-  <div class="container">
-    <p class="section-label reveal">Advanced Options</p>
-    <h2 class="section-title reveal">Clinical-grade <em>treatments</em></h2>
-    <p class="reveal" style="color:rgba(255,255,255,0.5); max-width:540px; font-weight:300; line-height:1.75; margin-top:0.8rem;">
-      All procedures are performed by licensed professionals in a sterile, clinical environment using FDA-cleared technology.
-    </p>
-
-    <div class="treatments-grid" role="list">
-      <article class="treatment-item reveal" role="listitem">
-        <div class="treatment-num" aria-hidden="true">01</div>
-        <div class="treatment-info">
-          <h3>HydraFacial MD®</h3>
-          <p>Multi-step vortex cleansing, exfoliation and serum infusion for instant, visible skin transformation.</p>
-          <span class="treatment-tag">From $180</span>
-        </div>
-      </article>
-      <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
-        <div class="treatment-num" aria-hidden="true">02</div>
-        <div class="treatment-info">
-          <h3>Laser Resurfacing</h3>
-          <p>Fractional CO₂ laser targeting fine lines, scars, and uneven texture with minimal downtime.</p>
-          <span class="treatment-tag">From $320</span>
-        </div>
-      </article>
-      <article class="treatment-item reveal" role="listitem">
-        <div class="treatment-num" aria-hidden="true">03</div>
-        <div class="treatment-info">
-          <h3>Microneedling RF</h3>
-          <p>Radiofrequency energy delivered through micro-needles to tighten skin and stimulate collagen production.</p>
-          <span class="treatment-tag">From $250</span>
-        </div>
-      </article>
-      <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
-        <div class="treatment-num" aria-hidden="true">04</div>
-        <div class="treatment-info">
-          <h3>Chemical Peels</h3>
-          <p>Medical-grade AHA/BHA/TCA peels customised to address acne, pigmentation, and skin renewal.</p>
-          <span class="treatment-tag">From $120</span>
-        </div>
-      </article>
-      <article class="treatment-item reveal" role="listitem">
-        <div class="treatment-num" aria-hidden="true">05</div>
-        <div class="treatment-info">
-          <h3>LED Phototherapy</h3>
-          <p>Targeted wavelength light therapy to reduce inflammation, kill bacteria, and boost cellular repair.</p>
-          <span class="treatment-tag">From $90</span>
-        </div>
-      </article>
-      <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
-        <div class="treatment-num" aria-hidden="true">06</div>
-        <div class="treatment-info">
-          <h3>PRP Skin Rejuvenation</h3>
-          <p>Platelet-rich plasma therapy harnessing your body's own growth factors for natural, long-lasting results.</p>
-          <span class="treatment-tag">From $380</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
-  <div class="container">
-    <div class="testimonials-header">
-      <div>
-        <p class="section-label reveal">What Clients Say</p>
-        <h2 class="section-title reveal">Real results, <em>real stories</em></h2>
-      </div>
-      <div class="slider-controls reveal">
-        <button class="slider-btn" id="prevBtn" aria-label="Previous testimonials">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="slider-btn" id="nextBtn" aria-label="Next testimonials">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="testimonial-track-wrap" role="region" aria-label="Testimonials slider">
-      <div class="testimonial-track" id="testimonialTrack">
-        <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p class="t-text">"After struggling with cystic acne for 10 years, the team at Lumière finally gave me a plan that actually worked. My skin has never looked this clear. The consultation was honest, thorough, and zero pressure."</p>
-          <div class="t-author">
-            <div class="t-avatar" aria-hidden="true">SR</div>
-            <div>
-              <div class="t-name">Sarah R.</div>
-              <div class="t-title">Acne Treatment Client</div>
-            </div>
+      <div class="treatments-grid" role="list">
+        <article class="treatment-item reveal" role="listitem">
+          <div class="treatment-num" aria-hidden="true">01</div>
+          <div class="treatment-info">
+            <h3>HydraFacial MD®</h3>
+            <p>Multi-step vortex cleansing, exfoliation and serum infusion for instant, visible skin transformation.</p>
+            <span class="treatment-tag">From ₹5,500</span>
           </div>
         </article>
-        <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p class="t-text">"The HydraFacial results were incredible — my skin looked 10 years younger after just one session. The staff are knowledgeable, kind, and really took time to understand my concerns."</p>
-          <div class="t-author">
-            <div class="t-avatar" aria-hidden="true">MK</div>
-            <div>
-              <div class="t-name">Michelle K.</div>
-              <div class="t-title">Anti-Aging Client</div>
-            </div>
+        <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
+          <div class="treatment-num" aria-hidden="true">02</div>
+          <div class="treatment-info">
+            <h3>Laser Resurfacing</h3>
+            <p>Fractional CO₂ laser targeting fine lines, scars, and uneven texture with minimal downtime.</p>
+            <span class="treatment-tag">From ₹9,500</span>
           </div>
         </article>
-        <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p class="t-text">"I was nervous about laser treatment but the team made me feel completely safe and informed at every step. The results after 3 sessions are phenomenal — my pigmentation is almost completely gone."</p>
-          <div class="t-author">
-            <div class="t-avatar" aria-hidden="true">JP</div>
-            <div>
-              <div class="t-name">James P.</div>
-              <div class="t-title">Pigmentation Client</div>
-            </div>
+        <article class="treatment-item reveal" role="listitem">
+          <div class="treatment-num" aria-hidden="true">03</div>
+          <div class="treatment-info">
+            <h3>Microneedling RF</h3>
+            <p>Radiofrequency energy delivered through micro-needles to tighten skin and stimulate collagen production.
+            </p>
+            <span class="treatment-tag">From ₹7,500</span>
           </div>
         </article>
-        <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p class="t-text">"Lumière has genuinely changed my relationship with my skin. The AI skin analysis was eye-opening and the personalised plan they built has me seeing results I never thought possible at 52."</p>
-          <div class="t-author">
-            <div class="t-avatar" aria-hidden="true">DL</div>
-            <div>
-              <div class="t-name">Diana L.</div>
-              <div class="t-title">Skin Plan Client</div>
-            </div>
+        <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
+          <div class="treatment-num" aria-hidden="true">04</div>
+          <div class="treatment-info">
+            <h3>Chemical Peels</h3>
+            <p>Medical-grade AHA/BHA/TCA peels customised to address acne, pigmentation, and skin renewal.</p>
+            <span class="treatment-tag">From ₹3,500</span>
           </div>
         </article>
-        <article class="testimonial-card">
-          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p class="t-text">"Finally a clinic that treats you as a whole person, not just a sale. The transparency around pricing, products, and expected results sets Lumière apart from every other clinic I've visited."</p>
-          <div class="t-author">
-            <div class="t-avatar" aria-hidden="true">TC</div>
-            <div>
-              <div class="t-name">Tara C.</div>
-              <div class="t-title">Medical Derm Client</div>
-            </div>
+        <article class="treatment-item reveal" role="listitem">
+          <div class="treatment-num" aria-hidden="true">05</div>
+          <div class="treatment-info">
+            <h3>LED Phototherapy</h3>
+            <p>Targeted wavelength light therapy to reduce inflammation, kill bacteria, and boost cellular repair.</p>
+            <span class="treatment-tag">From ₹2,500</span>
+          </div>
+        </article>
+        <article class="treatment-item reveal" role="listitem" style="transition-delay:0.1s">
+          <div class="treatment-num" aria-hidden="true">06</div>
+          <div class="treatment-info">
+            <h3>PRP Skin Rejuvenation</h3>
+            <p>Platelet-rich plasma therapy harnessing your body's own growth factors for natural, long-lasting results.
+            </p>
+            <span class="treatment-tag">From ₹12,000</span>
           </div>
         </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== TEAM ===== -->
-<section id="team">
-  <div class="container">
-    <p class="section-label reveal">Our Specialists</p>
-    <h2 class="section-title reveal">Meet the <em>experts</em><br>behind your skin</h2>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <div>
+          <p class="section-label reveal">What Clients Say</p>
+          <h2 class="section-title reveal">Real results, <em>real stories</em></h2>
+        </div>
+        <div class="slider-controls reveal">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous testimonials">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <button class="slider-btn" id="nextBtn" aria-label="Next testimonials">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-    <div class="team-grid" role="list">
-      <article class="team-card reveal" role="listitem">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=75&auto=format&fit=crop&face" alt="Dr. Claire Moreau, Lead Dermatologist" width="400" height="533" loading="lazy" />
-          <div class="team-overlay">
-            <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
-            <a href="#" class="team-social" aria-label="Email contact">✉</a>
-          </div>
-        </div>
-        <div class="team-name">Dr. Claire Moreau</div>
-        <div class="team-role">Lead Dermatologist</div>
-      </article>
-      <article class="team-card reveal" role="listitem" style="transition-delay:0.1s">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=75&auto=format&fit=crop&face" alt="Dr. James Okoro, Medical Aesthetician" width="400" height="533" loading="lazy" />
-          <div class="team-overlay">
-            <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
-            <a href="#" class="team-social" aria-label="Email contact">✉</a>
-          </div>
-        </div>
-        <div class="team-name">Dr. James Okoro</div>
-        <div class="team-role">Medical Aesthetician</div>
-      </article>
-      <article class="team-card reveal" role="listitem" style="transition-delay:0.2s">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&q=75&auto=format&fit=crop&face" alt="Dr. Anika Patel, Laser Specialist" width="400" height="533" loading="lazy" />
-          <div class="team-overlay">
-            <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
-            <a href="#" class="team-social" aria-label="Email contact">✉</a>
-          </div>
-        </div>
-        <div class="team-name">Dr. Anika Patel</div>
-        <div class="team-role">Laser Specialist</div>
-      </article>
-      <article class="team-card reveal" role="listitem" style="transition-delay:0.3s">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=75&auto=format&fit=crop&face" alt="Dr. Marcus Chen, Cosmetic Dermatologist" width="400" height="533" loading="lazy" />
-          <div class="team-overlay">
-            <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
-            <a href="#" class="team-social" aria-label="Email contact">✉</a>
-          </div>
-        </div>
-        <div class="team-name">Dr. Marcus Chen</div>
-        <div class="team-role">Cosmetic Dermatologist</div>
-      </article>
-    </div>
-  </div>
-</section>
+      <div class="testimonial-track-wrap" role="region" aria-label="Testimonials slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <article class="testimonial-card">
+            <div class="review-meta">
+              <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="review-date">4 days ago</span>&emsp;
+              <svg class="t-google-logo" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.62-1.09-1.34-1.19-2.09z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 6.3l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+            </div>
+            <p class="t-text">"After struggling with cystic acne and severe post-inflammatory hyperpigmentation for 10
+              years, the team at Lumière finally gave me a plan that actually worked. My skin has never looked this
+              clear and even-toned."</p>
 
-<!-- ===== BOOKING CTA ===== -->
-<section id="booking" aria-labelledby="booking-title">
-  <div class="container">
-    <div class="booking-inner reveal">
-      <p class="section-label">Ready to Start?</p>
-      <h2 class="section-title" id="booking-title">Book your <em>free</em><br>skin consultation</h2>
-      <p>No commitment, no pressure. Just an honest 30-minute conversation with a certified skin specialist who'll listen and advise — for free.</p>
-      <div class="booking-actions">
-        <a href="tel:+18001234567" class="btn-cream">📞 Call +1-800-LUMIERE</a>
-        <a href="mailto:hello@lumiereskin.com" class="btn-ghost">✉ Email Us</a>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">SR</div>
+              <div>
+                <div class="t-name">Simran Rao</div>
+                <div class="t-title">Acne & PIH Client</div>
+              </div>
+            </div>
+            <div class="review-source">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span>Verified Patient Review</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="review-meta">
+              <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="review-date">1 week ago</span>&emsp;
+              <svg class="t-google-logo" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.62-1.09-1.34-1.19-2.09z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 6.3l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+            </div>
+            <p class="t-text">"My bridal skin prep with Lumière was incredible — they completely transformed my dull,
+              tired skin into an absolute glow for my wedding day. The staff are so caring and took the time to
+              understand my skin."</p>
+
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">MK</div>
+              <div>
+                <div class="t-name">Megha Kapoor</div>
+                <div class="t-title">Bridal Glow Client</div>
+              </div>
+            </div>
+            <div class="review-source">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span>Verified Patient Review</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="review-meta">
+              <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="review-date">2 weeks ago</span>&emsp;
+              <svg class="t-google-logo" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.62-1.09-1.34-1.19-2.09z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 6.3l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+            </div>
+            <p class="t-text">"I was suffering from intense tanning and sun spots from my daily commute in Bengaluru.
+              The laser treatments were phenomenal — my pigmentation is almost completely gone and my natural complexion
+              is restored."</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">JP</div>
+              <div>
+                <div class="t-name">Jaideep Prasad</div>
+                <div class="t-title">Tan & Pigment Client</div>
+              </div>
+            </div>
+            <div class="review-source">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span>Verified Patient Review</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="review-meta">
+              <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="review-date">3 weeks ago</span>&emsp;
+              <svg class="t-google-logo" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.62-1.09-1.34-1.19-2.09z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 6.3l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+            </div>
+            <p class="t-text">"Lumière has changed my relationship with my skin. The AI skin analysis was eye-opening
+              and the customized plan they built has given me results I never thought possible. Professional and
+              extremely thorough."</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">DN</div>
+              <div>
+                <div class="t-name">Devika Nair</div>
+                <div class="t-title">Skin Plan Client</div>
+              </div>
+            </div>
+            <div class="review-source">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span>Verified Patient Review</span>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="review-meta">
+              <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <span class="review-date">1 month ago</span>&emsp;
+              <svg class="t-google-logo" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.62-.62-1.09-1.34-1.19-2.09z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 6.3l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+            </div>
+            <p class="t-text">"Finally a clinic that treats you ethically and honestly. The transparency around pricing,
+              products, and realistic timelines sets Lumière apart from every other aesthetic clinic in Bengaluru."</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">TC</div>
+              <div>
+                <div class="t-name">Tanvi Choudhury</div>
+                <div class="t-title">Medical Derm Client</div>
+              </div>
+            </div>
+            <div class="review-source">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              <span>Verified Patient Review</span>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== FAQ ===== -->
-<section id="faq">
-  <div class="container">
-    <p class="section-label reveal">Got Questions?</p>
-    <h2 class="section-title reveal">Frequently <em>asked</em></h2>
+  <!-- ===== TEAM ===== -->
+  <section id="team">
+    <div class="container">
+      <p class="section-label reveal">Our Specialists</p>
+      <h2 class="section-title reveal">Meet the <em>experts</em><br>behind your skin</h2>
 
-    <div class="faq-grid">
-      <div class="faq-list reveal" role="list">
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            Is the first consultation really free?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>Yes, completely. Your initial 30-minute skin consultation with one of our dermatologists is 100% free with no obligation to proceed. We believe in earning your trust first.</p>
+      <div class="team-grid" role="list">
+        <article class="team-card reveal" role="listitem">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=75&auto=format&fit=crop&face"
+              alt="Dr. Ananya Rao, Lead Dermatologist" width="400" height="533" loading="lazy" />
+            <div class="team-overlay">
+              <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
+              <a href="#" class="team-social" aria-label="Email contact">✉</a>
+            </div>
           </div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            How do I know which treatment is right for me?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>During your consultation, we use clinical-grade skin analysis tools and a detailed questionnaire to map your skin profile. Our specialists then recommend a personalised plan — no guesswork, no one-size-fits-all.</p>
+          <div class="team-name">Dr. Ananya Rao</div>
+          <div class="team-role">Lead Dermatologist (MD, IADVL)</div>
+        </article>
+        <article class="team-card reveal" role="listitem" style="transition-delay:0.1s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=75&auto=format&fit=crop&face"
+              alt="Dr. Kabir Mehta, Chief Trichologist & Aesthete" width="400" height="533" loading="lazy" />
+            <div class="team-overlay">
+              <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
+              <a href="#" class="team-social" aria-label="Email contact">✉</a>
+            </div>
           </div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            Are your products cruelty-free and vegan?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>All topical products used in our clinic are cruelty-free. The majority are also vegan. We'll always tell you if a product contains an animal-derived ingredient like collagen or lanolin, so you can choose accordingly.</p>
+          <div class="team-name">Dr. Kabir Mehta</div>
+          <div class="team-role">Chief Trichologist (MD, FAM)</div>
+        </article>
+        <article class="team-card reveal" role="listitem" style="transition-delay:0.2s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&q=75&auto=format&fit=crop&face"
+              alt="Dr. Rohan Sharma, Aesthetic Laser Specialist" width="400" height="533" loading="lazy" />
+            <div class="team-overlay">
+              <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
+              <a href="#" class="team-social" aria-label="Email contact">✉</a>
+            </div>
           </div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            How many sessions will I need?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>It depends on the condition and treatment. Some clients see results in one session; others follow a 3–6 month programme. We'll always give you a realistic, honest estimate during your consultation.</p>
+          <div class="team-name">Dr. Rohan Sharma</div>
+          <div class="team-role">Laser Specialist (MD, DNB)</div>
+        </article>
+        <article class="team-card reveal" role="listitem" style="transition-delay:0.3s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=75&auto=format&fit=crop&face"
+              alt="Dr. Meera Krishnan, Cosmetic Dermatologist" width="400" height="533" loading="lazy" />
+            <div class="team-overlay">
+              <a href="#" class="team-social" aria-label="LinkedIn profile">in</a>
+              <a href="#" class="team-social" aria-label="Email contact">✉</a>
+            </div>
           </div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            Do you offer payment plans?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>Yes. We offer 0% interest payment plans on treatment packages over $300. We believe cost shouldn't be a barrier to good skin health. Ask our team for details during your consultation.</p>
-          </div>
-        </div>
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            What is your cancellation policy?
-            <div class="faq-icon" aria-hidden="true"><span>+</span></div>
-          </button>
-          <div class="faq-a" role="region">
-            <p>We ask for 24 hours' notice to cancel or reschedule without charge. Life happens — we're flexible and understanding. Just give us a call or drop us a message.</p>
-          </div>
-        </div>
-      </div>
-
-      <aside class="faq-contact reveal-right">
-        <h3>Still have questions?</h3>
-        <p>Our team is here Monday–Saturday, 9am–7pm. We'd love to hear from you and help you find the right path for your skin.</p>
-        <div class="contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.07h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
-          +1-800-LUMIERE
-        </div>
-        <div class="contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          hello@lumiereskin.com
-        </div>
-        <div class="contact-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          42 Park Avenue, New York, NY 10016
-        </div>
-        <a href="#booking" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Book Free Consult</a>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">Lumière <span>Skin</span></div>
-        <p class="footer-desc">Advanced, ethical dermatology rooted in science. Your skin health is our purpose.</p>
-        <div class="footer-socials" role="list" aria-label="Social media links">
-          <a href="#" class="social-btn" role="listitem" aria-label="Instagram">ig</a>
-          <a href="#" class="social-btn" role="listitem" aria-label="Facebook">f</a>
-          <a href="#" class="social-btn" role="listitem" aria-label="TikTok">tk</a>
-          <a href="#" class="social-btn" role="listitem" aria-label="YouTube">▶</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Treatments</h4>
-        <ul>
-          <li><a href="#services">Hydration Therapy</a></li>
-          <li><a href="#services">Anti-Aging Facials</a></li>
-          <li><a href="#services">Acne Treatment</a></li>
-          <li><a href="#treatments">Laser Resurfacing</a></li>
-          <li><a href="#treatments">Microneedling</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Clinic</h4>
-        <ul>
-          <li><a href="#about">Our Story</a></li>
-          <li><a href="#team">Meet the Team</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#booking">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Accessibility</a></li>
-        </ul>
+          <div class="team-name">Dr. Meera Krishnan</div>
+          <div class="team-role">Cosmetic Dermatologist (MD)</div>
+        </article>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 Lumière Skin Clinic. All rights reserved.</p>
-      <p>Made with care · Cruelty-free · Evidence-based</p>
+  </section>
+
+  <!-- ===== BOOKING CTA ===== -->
+  <section id="booking" aria-labelledby="booking-title">
+    <div class="container">
+      <div class="booking-inner reveal">
+        <p class="section-label">Ready to Start?</p>
+        <h2 class="section-title" id="booking-title">Book your <em>free</em><br>skin consultation</h2>
+        <p>No commitment, no pressure. Just an honest 30-minute conversation with a certified skin specialist who'll
+          listen and advise — for free.</p>
+        <div class="booking-actions">
+          <a href="tel:+918049528000" class="btn-cream">📞 Call +91 99 0000 0000</a>
+          <a href="mailto:hello@lumiereskin.com" class="btn-ghost">✉ Email Us</a>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script>
-  // ===== NAVBAR SCROLL =====
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <p class="section-label reveal">Got Questions?</p>
+      <h2 class="section-title reveal">Frequently <em>asked</em></h2>
 
-  // ===== HAMBURGER =====
-  const ham = document.getElementById('hamburger');
-  const mob = document.getElementById('mobileMenu');
-  ham.addEventListener('click', () => {
-    const open = ham.classList.toggle('open');
-    mob.classList.toggle('open', open);
-    ham.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  function closeMobile() {
-    ham.classList.remove('open');
-    mob.classList.remove('open');
-    ham.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
+      <div class="faq-grid">
+        <div class="faq-list reveal" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Is the first consultation really free?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>Yes, completely. Your initial 30-minute skin consultation with one of our dermatologists is 100% free
+                with no obligation to proceed. We believe in earning your trust first.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              How do I know which treatment is right for me?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>During your consultation, we use clinical-grade skin analysis tools and a detailed questionnaire to map
+                your skin profile. Our specialists then recommend a personalised plan — no guesswork, no
+                one-size-fits-all.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Are your products cruelty-free and vegan?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>All topical products used in our clinic are cruelty-free. The majority are also vegan. We'll always
+                tell you if a product contains an animal-derived ingredient like collagen or lanolin, so you can choose
+                accordingly.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              How many sessions will I need?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>It depends on the condition and treatment. Some clients see results in one session; others follow a 3–6
+                month programme. We'll always give you a realistic, honest estimate during your consultation.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Do you offer payment plans and accept UPI?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>Yes. We accept all major cards, NetBanking, and UPI (GPay, PhonePe, Paytm). We also offer No-Cost EMI
+                options on treatment packages over ₹10,000 to ensure quality skin health is accessible. Ask our team for
+                details during your visit.</p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              What is your cancellation policy?
+              <div class="faq-icon" aria-hidden="true"><span>+</span></div>
+            </button>
+            <div class="faq-a" role="region">
+              <p>We ask for 24 hours' notice to cancel or reschedule without charge. Life happens — we're flexible and
+                understanding. Just give us a call or drop us a message.</p>
+            </div>
+          </div>
+        </div>
 
-  // ===== PARTICLES =====
-  const particleContainer = document.getElementById('particles');
-  const positions = [
-    [15,20],[25,65],[45,40],[65,15],[75,75],[85,45],[35,85],[55,30],
-    [10,55],[90,25],[50,90],[30,10],[70,60],[20,80],[80,35]
-  ];
-  positions.forEach(([x, y], i) => {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.cssText = `left:${x}%;top:${y}%;animation-delay:${i * 0.4}s;animation-duration:${5 + (i % 4)}s`;
-    particleContainer.appendChild(p);
-  });
+        <aside class="faq-contact reveal-right">
+          <h3>Still have questions?</h3>
+          <p>Our team is here Monday–Saturday, 9am–7pm. We'd love to hear from you and help you find the right path for
+            your skin.</p>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.07h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z" />
+            </svg>
+            +91 99 0000 0000
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            hello@lumiereskin.com
+          </div>
+          <div class="contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            1st Floor, 80 Feet Road, Indiranagar, Bengaluru, 560038
+          </div>
+          <!-- Custom Map with Fake Pin -->
+          <div class="map-card" aria-label="Map showing Lumièra Skin Clinic location in Indiranagar, Bengaluru"
+            style="margin-top: 1.5rem; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border); height: 220px; position: relative;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 480 220"
+              style="display:block; background:#e8e0d8;" role="img" aria-label="Street map of Indiranagar area">
+              <!-- Map background -->
+              <rect width="480" height="220" fill="#ede8e0" />
 
-  // ===== SCROLL REVEAL =====
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+              <!-- City blocks -->
+              <rect x="0" y="0" width="108" height="78" fill="#ddd7cc" rx="1" />
+              <rect x="120" y="0" width="88" height="78" fill="#ddd7cc" rx="1" />
+              <rect x="220" y="0" width="92" height="78" fill="#ddd7cc" rx="1" />
+              <rect x="324" y="0" width="76" height="78" fill="#ddd7cc" rx="1" />
+              <rect x="412" y="0" width="68" height="78" fill="#ddd7cc" rx="1" />
+
+              <rect x="0" y="100" width="108" height="80" fill="#ddd7cc" rx="1" />
+              <rect x="120" y="100" width="88" height="80" fill="#ddd7cc" rx="1" />
+              <rect x="220" y="100" width="92" height="80" fill="#ddd7cc" rx="1" />
+              <rect x="324" y="100" width="76" height="80" fill="#ddd7cc" rx="1" />
+              <rect x="412" y="100" width="68" height="80" fill="#ddd7cc" rx="1" />
+
+              <rect x="0" y="192" width="108" height="28" fill="#ddd7cc" rx="1" />
+              <rect x="120" y="192" width="88" height="28" fill="#ddd7cc" rx="1" />
+              <rect x="220" y="192" width="92" height="28" fill="#ddd7cc" rx="1" />
+              <rect x="324" y="192" width="76" height="28" fill="#ddd7cc" rx="1" />
+              <rect x="412" y="192" width="68" height="28" fill="#ddd7cc" rx="1" />
+
+              <!-- Roads (horizontal) -->
+              <rect x="0" y="78" width="480" height="22" fill="#f5f0e8" />
+              <rect x="0" y="180" width="480" height="12" fill="#f5f0e8" />
+
+              <!-- Roads (vertical) -->
+              <rect x="108" y="0" width="12" height="220" fill="#f5f0e8" />
+              <rect x="208" y="0" width="12" height="220" fill="#f5f0e8" />
+              <rect x="312" y="0" width="12" height="220" fill="#f5f0e8" />
+              <rect x="400" y="0" width="12" height="220" fill="#f5f0e8" />
+
+              <!-- Road center lines -->
+              <line x1="0" y1="89" x2="480" y2="89" stroke="#e8e2d8" stroke-width="1" stroke-dasharray="12,8" />
+              <line x1="114" y1="0" x2="114" y2="220" stroke="#e8e2d8" stroke-width="1" stroke-dasharray="10,8" />
+              <line x1="214" y1="0" x2="214" y2="220" stroke="#e8e2d8" stroke-width="1" stroke-dasharray="10,8" />
+              <line x1="318" y1="0" x2="318" y2="220" stroke="#e8e2d8" stroke-width="1" stroke-dasharray="10,8" />
+
+              <!-- Green park -->
+              <rect x="122" y="102" width="84" height="74" fill="#c8d8b8" rx="4" />
+              <text x="164" y="143" text-anchor="middle" font-size="7.5" fill="#5a7a45" font-family="sans-serif"
+                font-weight="600">Park</text>
+
+              <!-- Road labels -->
+              <text x="240" y="95" text-anchor="middle" font-size="8.5" fill="#888" font-family="sans-serif"
+                font-weight="700" letter-spacing="0.5">80 FEET ROAD</text>
+              <text x="240" y="188" text-anchor="middle" font-size="7.5" fill="#aaa" font-family="sans-serif"
+                letter-spacing="0.4">100 FEET ROAD</text>
+              <text x="218" y="50" text-anchor="middle" font-size="7" fill="#aaa" font-family="sans-serif"
+                transform="rotate(-90,218,50)">CMH RD</text>
+              <text x="114" y="40" text-anchor="middle" font-size="7" fill="#aaa" font-family="sans-serif"
+                transform="rotate(-90,114,40)">12TH MAIN</text>
+
+              <!-- Clinic building highlight -->
+              <rect x="50" y="105" width="52" height="44" fill="#c9b8a8" rx="3" stroke="#b0977e" stroke-width="1.5" />
+              <text x="76" y="131" text-anchor="middle" font-size="6.5" fill="#6b4f3a" font-family="sans-serif"
+                font-weight="700">LUMIÈRA</text>
+              <text x="76" y="141" text-anchor="middle" font-size="5.5" fill="#8a6a52" font-family="sans-serif">SKIN
+                CLINIC</text>
+
+              <!-- Pulsing circle behind pin -->
+              <circle cx="76" cy="105" r="14" fill="#c9a07060" opacity="0.5">
+                <animate attributeName="r" values="10;18;10" dur="2s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite" />
+              </circle>
+
+              <!-- Location Pin -->
+              <g transform="translate(76,105)">
+                <!-- Pin shadow -->
+                <ellipse cx="0" cy="18" rx="6" ry="2.5" fill="#00000030" />
+                <!-- Pin body -->
+                <path d="M0,-22 C-10,-22 -14,-14 -14,-8 C-14,4 0,18 0,18 C0,18 14,4 14,-8 C14,-14 10,-22 0,-22 Z"
+                  fill="#c0392b" stroke="#a93226" stroke-width="1" />
+                <!-- Pin inner circle -->
+                <circle cx="0" cy="-8" r="5" fill="white" opacity="0.9" />
+                <!-- Pin dot -->
+                <circle cx="0" cy="-8" r="2.5" fill="#c0392b" />
+              </g>
+
+              <!-- Tooltip -->
+              <g transform="translate(76,78)">
+                <rect x="-52" y="-28" width="104" height="24" rx="6" fill="white" stroke="#ddd" stroke-width="1"
+                  filter="url(#dropshadow)" />
+                <text x="0" y="-12" text-anchor="middle" font-size="8.5" fill="#333" font-family="sans-serif"
+                  font-weight="700">Lumièra Skin Clinic</text>
+                <text x="0" y="-3" text-anchor="middle" font-size="7" fill="#888" font-family="sans-serif">Indiranagar,
+                  Bengaluru</text>
+                <!-- Tooltip tail -->
+                <polygon points="-5,-4 5,-4 0,2" fill="white" stroke="#ddd" stroke-width="0.5" />
+              </g>
+
+              <!-- Compass rose -->
+              <g transform="translate(452,20)">
+                <circle cx="0" cy="0" r="12" fill="white" opacity="0.85" stroke="#ccc" stroke-width="1" />
+                <text x="0" y="-4" text-anchor="middle" font-size="8" fill="#c0392b" font-family="sans-serif"
+                  font-weight="900">N</text>
+                <polygon points="0,-11 2,-3 0,-6 -2,-3" fill="#c0392b" />
+                <polygon points="0,11 2,3 0,6 -2,3" fill="#aaa" />
+              </g>
+
+              <!-- Google Maps style attribution -->
+              <rect x="0" y="210" width="480" height="10" fill="#f0ebe2" opacity="0.8" />
+              <text x="240" y="218" text-anchor="middle" font-size="6" fill="#aaa" font-family="sans-serif">Map data ·
+                Indiranagar, Bengaluru 560038</text>
+
+              <defs>
+                <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000025" />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <a href="#booking" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Book Free Consult</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Lumièra <span>Skin</span></div>
+          <p class="footer-desc">Advanced, ethical dermatology rooted in science. Your skin health is our purpose.</p>
+          <div class="footer-socials" role="list" aria-label="Social media links">
+            <a href="#" class="social-btn" role="listitem" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" role="listitem" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" role="listitem" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" role="listitem" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="#services">Hydration Therapy</a></li>
+            <li><a href="#services">Anti-Aging Facials</a></li>
+            <li><a href="#services">Acne Treatment</a></li>
+            <li><a href="#treatments">Laser Resurfacing</a></li>
+            <li><a href="#treatments">Microneedling</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Clinic</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#team">Meet the Team</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#booking">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Lumièra Skin Clinic · Bengaluru, India. All rights reserved.</p>
+        <p>Made with care · Cruelty-free · Evidence-based</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ===== HAMBURGER =====
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => {
+      const open = ham.classList.toggle('open');
+      mob.classList.toggle('open', open);
+      ham.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => io.observe(el));
+    function closeMobile() {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+      ham.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
 
-  // ===== TESTIMONIAL SLIDER =====
-  const track = document.getElementById('testimonialTrack');
-  const cards = track.querySelectorAll('.testimonial-card');
-  let idx = 0;
+    // ===== PARTICLES =====
+    const particleContainer = document.getElementById('particles');
+    const positions = [
+      [15, 20], [25, 65], [45, 40], [65, 15], [75, 75], [85, 45], [35, 85], [55, 30],
+      [10, 55], [90, 25], [50, 90], [30, 10], [70, 60], [20, 80], [80, 35]
+    ];
+    positions.forEach(([x, y], i) => {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.cssText = `left:${x}%;top:${y}%;animation-delay:${i * 0.4}s;animation-duration:${5 + (i % 4)}s`;
+      particleContainer.appendChild(p);
+    });
 
-  function getVisible() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 640) return 2;
-    return 1;
-  }
-
-  function updateSlider() {
-    const vis = getVisible();
-    const maxIdx = cards.length - vis;
-    idx = Math.max(0, Math.min(idx, maxIdx));
-    const cardW = track.parentElement.offsetWidth;
-    const gap = 24;
-    const perCard = (cardW - gap * (vis - 1)) / vis;
-    track.style.transform = `translateX(-${idx * (perCard + gap)}px)`;
-  }
-
-  document.getElementById('prevBtn').addEventListener('click', () => { idx = Math.max(0, idx - 1); updateSlider(); });
-  document.getElementById('nextBtn').addEventListener('click', () => { idx = Math.min(cards.length - getVisible(), idx + 1); updateSlider(); });
-  window.addEventListener('resize', updateSlider, { passive: true });
-
-  // ===== FAQ ACCORDION =====
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(o => {
-        o.classList.remove('open');
-        o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
 
-  // ===== SMOOTH ANCHOR =====
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
-      if (!id) return;
-      const el = document.getElementById(id);
-      if (el) {
-        e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    // ===== TESTIMONIAL SLIDER =====
+    const track = document.getElementById('testimonialTrack');
+    const cards = track.querySelectorAll('.testimonial-card');
+    let idx = 0;
+
+    function getVisible() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
+    }
+
+    function updateSlider() {
+      const vis = getVisible();
+      const maxIdx = cards.length - vis;
+      idx = Math.max(0, Math.min(idx, maxIdx));
+      const cardW = track.parentElement.offsetWidth;
+      const gap = 24;
+      const perCard = (cardW - gap * (vis - 1)) / vis;
+      track.style.transform = `translateX(-${idx * (perCard + gap)}px)`;
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => { idx = Math.max(0, idx - 1); updateSlider(); });
+    document.getElementById('nextBtn').addEventListener('click', () => { idx = Math.min(cards.length - getVisible(), idx + 1); updateSlider(); });
+    window.addEventListener('resize', updateSlider, { passive: true });
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(o => {
+          o.classList.remove('open');
+          o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
-  });
-</script>
+
+    // ===== SMOOTH ANCHOR =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 
 </body>
+
 </html>
