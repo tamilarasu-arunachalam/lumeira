@@ -69,6 +69,8 @@
       color: var(--charcoal);
       line-height: 1.6;
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-y;
       padding-top: 60px;
     }
 
@@ -171,29 +173,47 @@
     /* ========== NAVBAR ========== */
     nav {
       position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
+      inset: 0 auto auto 0 !important;
       width: 100% !important;
       z-index: 2147483647 !important;
+      margin: 0 !important;
       padding: 0 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 60px;
+      min-height: 60px;
+      box-sizing: border-box;
       background: rgba(250, 247, 242, 0.98);
       border-bottom: 1px solid rgba(232, 227, 220, 0.75);
       box-shadow: var(--shadow-sm);
-      backdrop-filter: saturate(180%) blur(10px);
-      -webkit-backdrop-filter: saturate(180%) blur(10px);
       transition: background var(--transition), box-shadow var(--transition);
-      transform: translateZ(0);
-      will-change: transform;
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      backface-visibility: hidden;
+      will-change: top, transform;
+      touch-action: pan-y;
+      pointer-events: auto;
     }
 
     nav.scrolled {
       background: var(--warm-white);
       box-shadow: var(--shadow-md);
+    }
+
+    #navbar {
+      position: fixed !important;
+      inset: 0 auto auto 0 !important;
+      width: 100% !important;
+      z-index: 2147483647 !important;
+      margin: 0 !important;
+      padding: 0 5% !important;
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      will-change: top, transform !important;
+      box-sizing: border-box !important;
+      touch-action: pan-y !important;
+      pointer-events: auto !important;
     }
 
     .nav-logo {
@@ -272,12 +292,14 @@
       gap: 5px;
       cursor: pointer;
       padding: 8px;
-      background: none;
+      background: transparent;
       border: none;
       width: 40px;
       height: 40px;
       justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 2147483648;
     }
 
     .hamburger span {
@@ -364,10 +386,12 @@
     #hero {
       min-height: 100vh;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       display: flex;
       align-items: center;
       background: var(--cream);
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
     }
 
     .hero-bg {
@@ -2015,11 +2039,13 @@
 
     @media (max-width: 768px) {
       .nav-links {
-        display: none;
+        display: none !important;
       }
 
       .hamburger {
-        display: flex;
+        display: flex !important;
+        position: relative !important;
+        z-index: 2147483648 !important;
       }
 
       .mobile-menu {
